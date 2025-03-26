@@ -1,0 +1,134 @@
+.problem-detail-panel {
+  width: 80%;
+  padding: 20px;
+  margin: 0 300px 0 350px;
+  background-color: #2c3e50;
+  height: calc(100vh - 50px);
+  overflow-y: auto;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+.problem-detail-panel::-webkit-scrollbar {
+  width: 8px;
+}
+
+.problem-detail-panel::-webkit-scrollbar-thumb {
+  background-color: #34495e;
+  border-radius: 10px;
+}
+
+.problem-detail-panel::-webkit-scrollbar-track {
+  background-color: #2c3e50;
+}
+
+.problem-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.problem-title {
+  font-size: 26px;
+  margin-bottom: 15px;
+  color: #ecf0f1;
+}
+
+.problem-description {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #bdc3c7;
+}
+
+.subheading {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #1abc9c;
+  font-weight: 600;
+}
+
+/* Example Section */
+.examples-section {
+  background-color: #34495e;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.examples-list {
+  list-style: none;
+  padding: 0;
+}
+
+.example-item {
+  margin-bottom: 20px;
+  font-size: 14px;
+  background-color: #2c3e50;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.example-item strong {
+  color: #1abc9c;
+}
+
+.complexity-section {
+  background-color: #34495e;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.complexity-details {
+  margin: 0;
+}
+
+.complexity-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.complexity-row p {
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+.link-section {
+  margin-bottom: 20px;
+}
+
+.problem-link {
+  color: #e74c3c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.problem-link:hover {
+  text-decoration: underline;
+}
+
+.code-editor-container {
+  margin-top: 20px;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .problem-title {
+    font-size: 22px;
+  }
+
+  .problem-description,
+  .complexity-section,
+  .examples-section {
+    font-size: 14px;
+  }
+
+  .example-item {
+    padding: 10px;
+  }
+}

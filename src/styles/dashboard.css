@@ -1,0 +1,88 @@
+.dashboard {
+  width: 300px;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  height: 100%;
+  overflow-y: auto;
+  right: 0;
+  font-family: "Arial", sans-serif;
+  position: fixed;
+  border-left: 2px solid#1e2a37;
+}
+
+.user-info-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.user-profile-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.user-details h3 {
+  margin: 0;
+  font-size: 18px;
+  color: white;
+  margin-top: 10px;
+}
+
+.user-details p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #777;
+}
+
+.login-prompt {
+  background-color: #2c3e50;
+  padding: 20px;
+  border-radius: 8px;
+
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: center;
+  color: #ecf0f1;
+}
+
+.login-message {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.login-button,
+.signup-button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.login-button {
+  background-color: #3498db;
+  color: white;
+}
+
+.login-button:hover {
+  background-color: #2980b9;
+}
+
+.signup-button {
+  background-color: #27ae60;
+  color: white;
+}
+
+.signup-button:hover {
+  background-color: #219653;
+}
