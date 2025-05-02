@@ -1,26 +1,16 @@
 import React, {useState, useEffect} from "react";
 import AceEditor from "react-ace";
 import ace from "ace-builds";
+import "../styles/code-editor.css";
 
-// Fix: Explicitly set base path for Ace
 ace.config.set("basePath", "/node_modules/ace-builds/src-noconflict");
 
-// Import correct mode, dark theme, and extensions
 import "ace-builds/src-noconflict/mode-javascript";
-import "ace-builds/src-noconflict/theme-monokai"; // Changed to dark theme
+import "ace-builds/src-noconflict/theme-monokai";
 import "ace-builds/src-noconflict/ext-language_tools";
 
 function CodeEditor({selectedProblem}) {
   const [value, setValue] = useState("");
-
-  const buttonStyle = {
-    padding: "5px 8px",
-    cursor: "pointer",
-    backgroundColor: "#282c34", // Darker button background
-    color: "white",
-    border: "none",
-    transition: "background-color 0.3s ease",
-  };
 
   useEffect(() => {
     if (!selectedProblem) return;
@@ -53,39 +43,21 @@ function CodeEditor({selectedProblem}) {
   };
 
   return (
-    <div
-      className="codeEdit"
-      key={selectedProblem}
-      style={{
-        backgroundColor: "#1e1e1e",
-        padding: "10px",
-        borderRadius: "10px",
-      }}
-    >
-      <button
-        className="code-save"
-        style={{
-          marginLeft: "540px",
-          borderTopLeftRadius: "7px",
-          ...buttonStyle,
-        }}
-        onClick={handleSave}
-      >
-        Save
-      </button>
-      <button className="code-copy" style={buttonStyle} onClick={handleCopy}>
-        Copy
-      </button>
-      <button
-        className="code-reset"
-        style={{borderTopRightRadius: "7px", ...buttonStyle}}
-        onClick={handleReset}
-      >
-        Reset
-      </button>
+    <div className="codeEdit" key={selectedProblem}>
+      <div className="code-btns">
+        <button className="code-save btn" onClick={handleSave}>
+          Save
+        </button>
+        <button className="code-copy btn" onClick={handleCopy}>
+          Copy
+        </button>
+        <button className="code-reset btn" onClick={handleReset}>
+          Reset
+        </button>
+      </div>
       <AceEditor
         style={{
-          width: "700px",
+          width: "100%",
           margin: "0 auto",
           borderRadius: "10px",
           backgroundColor: "#1e1e1e", // Dark background

@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
-import "../styles/user-problem.css";
+import React, {useState, useEffect} from "react";
+import "../styles/custom-challenges.css";
+
 const CustomChallenges = () => {
   const [problems, setProblems] = useState([]);
   const [problemTitle, setProblemTitle] = useState("");
@@ -60,42 +61,42 @@ const CustomChallenges = () => {
   };
 
   return (
-    <div style={styles.container}>
-      <h2 style={styles.header}>Custom Challenges</h2>
-      <p style={styles.description}>
+    <div className="custom-container">
+      <h2 className="custom-header">Custom Challenges</h2>
+      <p className="custom-description">
         Add, edit, or delete problems that you found or created yourself.
         Include a link for more details.
       </p>
 
-      <div style={styles.formContainer}>
+      <div className="custom-form">
         <input
           type="text"
           placeholder="Problem Title"
           value={problemTitle}
           onChange={(e) => setProblemTitle(e.target.value)}
-          style={styles.input}
+          className="custom-input"
         />
         <textarea
           placeholder="Problem Description"
           value={problemDescription}
           onChange={(e) => setProblemDescription(e.target.value)}
-          style={styles.textarea}
+          className="custom-textarea"
         ></textarea>
         <input
           type="url"
           placeholder="Problem URL (Optional)"
           value={problemLink}
           onChange={(e) => setProblemLink(e.target.value)}
-          style={styles.input}
+          className="custom-input"
         />
-        <button onClick={handleAddOrUpdateProblem} style={styles.addButton}>
+        <button onClick={handleAddOrUpdateProblem} className="custom-add-btn">
           {editIndex !== null ? "Update Problem" : "Add Problem"}
         </button>
       </div>
 
-      <div style={styles.problemList}>
+      <div className="custom-list">
         {problems.map((problem, index) => (
-          <div key={index} style={styles.problemItem}>
+          <div key={index} className="custom-item">
             <h3>{problem.title}</h3>
             <p>{problem.description}</p>
             {problem.link && (
@@ -103,20 +104,20 @@ const CustomChallenges = () => {
                 href={problem.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={styles.link}
+                className="custom-link"
               >
                 View More Details
               </a>
             )}
             <button
               onClick={() => handleEditProblem(index)}
-              style={styles.editButton}
+              className="custom-edit-btn"
             >
               Edit
             </button>
             <button
               onClick={() => handleDeleteProblem(index)}
-              style={styles.deleteButton}
+              className="custom-delete-btn"
             >
               Delete
             </button>
@@ -125,91 +126,6 @@ const CustomChallenges = () => {
       </div>
     </div>
   );
-};
-
-const styles = {
-  container: {
-    background: "#2c3e50",
-    padding: "20px",
-    color: "#ecf0f1",
-  },
-  header: {
-    textAlign: "center",
-    fontSize: "24px",
-  },
-  description: {
-    textAlign: "center",
-    marginBottom: "20px",
-  },
-  formContainer: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    marginBottom: "20px",
-  },
-  input: {
-    width: "80%",
-    padding: "10px",
-    marginBottom: "10px",
-    borderRadius: "5px",
-    border: "none",
-    fontSize: "16px",
-  },
-  textarea: {
-    width: "80%",
-    height: "100px",
-    padding: "10px",
-    marginBottom: "10px",
-    borderRadius: "5px",
-    border: "none",
-    fontSize: "16px",
-  },
-  addButton: {
-    padding: "10px 20px",
-    backgroundColor: "#27ae60",
-    color: "#fff",
-    border: "none",
-    borderRadius: "5px",
-    cursor: "pointer",
-    fontSize: "16px",
-  },
-  problemList: {
-    marginTop: "20px",
-  },
-  problemItem: {
-    backgroundColor: "#34495e",
-    padding: "15px",
-    margin: "10px 0",
-    borderRadius: "5px",
-  },
-  editButton: {
-    marginTop: "10px",
-    padding: "5px 10px",
-    backgroundColor: "#3498db",
-    color: "#fff",
-    border: "none",
-    borderRadius: "5px",
-    cursor: "pointer",
-    marginRight: "10px",
-  },
-  deleteButton: {
-    marginTop: "10px",
-    padding: "5px 10px",
-    backgroundColor: "#e74c3c",
-    color: "#fff",
-    border: "none",
-    borderRadius: "5px",
-    cursor: "pointer",
-  },
-  link: {
-    display: "inline-block",
-    margin: "10px 10px 0 0",
-    padding: "5px 10px",
-    backgroundColor: "#8e44ad",
-    color: "#fff",
-    textDecoration: "none",
-    borderRadius: "5px",
-  },
 };
 
 export default CustomChallenges;

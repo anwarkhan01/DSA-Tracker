@@ -1,0 +1,24 @@
+.structured-challenges {
+  display: flex;
+  min-width: 100vw;
+}
+.side-menu-wrapper {
+  width: 20%;
+}
+
+@media (max-width: 760px) {
+  .structured-challenges {
+    flex-direction: column;
+  }
+  .side-menu-wrapper {
+    display: none;
+    /* display: block; */
+    position: fixed;
+    z-index: 10;
+    width: 80%;
+  }
+
+  .side-menu-wrapper.show {
+    display: block;
+  }
+}

@@ -86,7 +86,7 @@ function ProblemDetailPanel({selectedProblem, dsaData, keyy}) {
             padding: "20px",
             border: "2px solid #2c3e50",
             borderRadius: "10px",
-            width: "fit-content",
+            width: "100%",
             marginLeft: "auto",
             marginRight: "auto",
             animation: "fadeIn 1.5s ease-in-out",

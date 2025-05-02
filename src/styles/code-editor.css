@@ -1,0 +1,25 @@
+.codeEdit {
+  width: 100%;
+  background: #1e1e1e;
+  padding: 10px;
+  border-radius: 10px;
+}
+.code-btns {
+  text-align: right;
+}
+.btn {
+  cursor: pointer;
+  padding: 5px 8px;
+  background: #24282e;
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.code-save {
+  border-radius: 7px 0 0 7px;
+}
+
+.code-reset {
+  border-radius: 0 7px 7px 0;
+}

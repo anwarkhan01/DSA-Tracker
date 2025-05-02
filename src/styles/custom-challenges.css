@@ -1,27 +1,28 @@
-.container {
+.custom-container {
   background: #2c3e50;
   padding: 20px;
+  min-height: calc(100vh - 50px);
   color: #ecf0f1;
 }
 
-.header {
+.custom-header {
   text-align: center;
   font-size: 24px;
 }
 
-.description {
+.custom-description {
   text-align: center;
   margin-bottom: 20px;
 }
 
-.formContainer {
+.custom-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.input {
+.custom-input {
   width: 80%;
   padding: 10px;
   margin-bottom: 10px;
@@ -30,7 +31,7 @@
   font-size: 16px;
 }
 
-.textarea {
+.custom-textarea {
   width: 80%;
   height: 100px;
   padding: 10px;
@@ -40,7 +41,7 @@
   font-size: 16px;
 }
 
-.addButton {
+.custom-add-btn {
   padding: 10px 20px;
   background-color: #27ae60;
   color: #fff;
@@ -50,18 +51,18 @@
   font-size: 16px;
 }
 
-.problemList {
+.custom-list {
   margin-top: 20px;
 }
 
-.problemItem {
+.custom-item {
   background-color: #34495e;
   padding: 15px;
   margin: 10px 0;
   border-radius: 5px;
 }
 
-.editButton {
+.custom-edit-btn {
   margin-top: 10px;
   padding: 5px 10px;
   background-color: #3498db;
@@ -72,7 +73,7 @@
   margin-right: 10px;
 }
 
-.deleteButton {
+.custom-delete-btn {
   margin-top: 10px;
   padding: 5px 10px;
   background-color: #e74c3c;
@@ -82,7 +83,7 @@
   cursor: pointer;
 }
 
-.link {
+.custom-link {
   display: inline-block;
   margin: 10px 10px 0 0;
   padding: 5px 10px;

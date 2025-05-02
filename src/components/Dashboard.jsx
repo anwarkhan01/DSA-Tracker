@@ -1,10 +1,10 @@
 import React from "react";
-import { signInWithPopup } from "firebase/auth";
-import { auth, googleProvider } from "../config/firebase";
+import {signInWithPopup} from "firebase/auth";
+import {auth, googleProvider} from "../config/firebase";
 
 import Progress from "./Progress";
 import "../styles/dashboard.css";
-const Dashboard = ({ checkedCount, user }) => {
+const Dashboard = ({checkedCount, user}) => {
   const signInWithGoogle = async () => {
     try {
       await signInWithPopup(auth, googleProvider);
