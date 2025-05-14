@@ -2,7 +2,7 @@ import React, {useEffect, useRef, useState} from "react";
 import {NavLink, useLocation} from "react-router-dom";
 import {auth, googleProvider} from "../config/firebase";
 import {signInWithPopup, signOut, onAuthStateChanged} from "firebase/auth";
-import "../styles/navbar-css.css";
+import "../styles/navbar.css";
 
 const Navbar = ({setShowLeftMenu, setShowRightMenu, showRightMenu}) => {
   const [user, setUser] = useState(null);

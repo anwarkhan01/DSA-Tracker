@@ -1,8 +1,7 @@
 import React from "react";
 import {dsaData} from "../../public/dsaData";
 import "../styles/sidemenu.css";
-// import { signInWithPopup, onAuthStateChanged } from "firebase/auth";
-// import { auth, googleProvider } from "../config/firebase";
+
 function SideMenu({
   handleProblemClick,
   selectedProblem,

@@ -72,26 +72,7 @@ function ProblemDetailPanel({selectedProblem, dsaData, keyy}) {
           })()}
         </div>
       ) : (
-        <p
-          className="select-problem-text"
-          style={{
-            textAlign: "center",
-            fontSize: "28px",
-            fontWeight: "bold",
-            color: "#2c3e50",
-            background: "linear-gradient(90deg, #8e44ad, #3498db)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            marginTop: "50px",
-            padding: "20px",
-            border: "2px solid #2c3e50",
-            borderRadius: "10px",
-            width: "100%",
-            marginLeft: "auto",
-            marginRight: "auto",
-            animation: "fadeIn 1.5s ease-in-out",
-          }}
-        >
+        <p className="select-problem-text">
           Welcome to the world of problems... But first, pick one!
         </p>
       )}

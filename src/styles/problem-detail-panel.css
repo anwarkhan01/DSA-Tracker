@@ -115,6 +115,25 @@
   text-decoration: underline;
 }
 
+.select-problem-text {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #2c3e50;
+  background: linear-gradient(90deg, #8e44ad, #3498db);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  margin-top: 50px;
+  padding: 20px;
+  border: 2px solid #2c3e50;
+  border-radius: 10px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .code-editor-container {
   margin-top: 20px;
   width: 100%;

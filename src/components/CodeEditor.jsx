@@ -60,11 +60,11 @@ function CodeEditor({selectedProblem}) {
           width: "100%",
           margin: "0 auto",
           borderRadius: "10px",
-          backgroundColor: "#1e1e1e", // Dark background
+          backgroundColor: "#1e1e1e",
         }}
         placeholder="Enter Your Code Here"
         mode="javascript"
-        theme="monokai" // Changed to a dark theme
+        theme="monokai"
         name="code-editor"
         onChange={handleChange}
         fontSize={14}
